@@ -1,0 +1,452 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <title>Standar Ukuran Tubuh Sapi Bali</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="navbar.css" rel="stylesheet"> -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body style="padding: 20px 0px;">
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Navigasi</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Standar Ukuran Tubuh Sapi Bali</a>
+        </div>
+        
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#simulasi">Simulasi</a></li>
+            <li><a href="#tim-peneliti">Tim Peneliti</a></li>
+          </ul>
+
+          <form class="navbar-form navbar-right" role="form">
+            <div class="form-group">
+              <input type="text" class="form-control" id="input_age" placeholder="Umur Sapi Bali (bulan)">
+            </div>
+            <input type="button" class="btn btn-primary" id="button_calculate" value="Hitung">
+          </form>
+
+        </div><!--/.nav-collapse -->
+
+      </div>
+    </div>
+
+    <div class="container" style="padding-top: 30px;">
+      <div class="page-header">
+        <h2>Standar Ukuran Tubuh Sapi Bali Berdasarkan Pola Pertumbuhan dan Kedekatan Hubungan Dimensi Tubuhnya</h2>
+      </div>
+
+      <a name="simulasi"></a>
+      <div class="page-header" style="padding-top: 50px;">
+        <h2>Sapi Betina <small>Umur <span id="female_age"></span> Bulan</small></h2>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Ukuran Tubuh</th>
+              <th class="text-center success" width="20%">Kelas I</th>
+              <th class="text-center warning" width="20%">Kelas II</th>
+              <th class="text-center danger" width="20%">Kelas III</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Lebar Kemudi (cm)</td>
+              <td class="success text-center" id="class_female_1_a"></td>
+              <td class="warning text-center" id="class_female_2_a"></td>
+              <td class="danger text-center" id="class_female_3_a"></td>
+            </tr>
+            <tr>
+              <td>Tinggi Tubuh (cm)</td>
+              <td class="success text-center" id="class_female_1_b"></td>
+              <td class="warning text-center" id="class_female_2_b"></td>
+              <td class="danger text-center" id="class_female_3_b"></td>
+            </tr>
+            <tr>
+              <td>Panjang Tubuh (cm)</td>
+              <td class="success text-center" id="class_female_1_c"></td>
+              <td class="warning text-center" id="class_female_2_c"></td>
+              <td class="danger text-center" id="class_female_3_c"></td>
+            </tr>
+            <tr>
+              <td>Lingkar Dada (cm)</td>
+              <td class="success text-center" id="class_female_1_d"></td>
+              <td class="warning text-center" id="class_female_2_d"></td>
+              <td class="danger text-center" id="class_female_3_d"></td>
+            </tr>
+            <tr>
+              <td>Berat Badan (kg)</td>
+              <td class="success text-center" id="class_female_1_e"></td>
+              <td class="warning text-center" id="class_female_2_e"></td>
+              <td class="danger text-center" id="class_female_3_e"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="page-header">
+        <h2>Sapi Jantan <small>Umur <span id="male_age"></span> Bulan</small></h2>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Ukuran Tubuh</th>
+              <th class="text-center success" width="20%">Kelas I</th>
+              <th class="text-center warning" width="20%">Kelas II</th>
+              <th class="text-center danger" width="20%">Kelas III</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lebar Kemudi (cm)</td>
+              <td class="success text-center" id="class_male_1_a"></td>
+              <td class="warning text-center" id="class_male_2_a"></td>
+              <td class="danger text-center" id="class_male_3_a"></td>
+            </tr>
+            <tr>
+              <td>Tinggi Tubuh (cm)</td>
+              <td class="success text-center" id="class_male_1_b"></td>
+              <td class="warning text-center" id="class_male_2_b"></td>
+              <td class="danger text-center" id="class_male_3_b"></td>
+            </tr>
+            <tr>
+              <td>Panjang Tubuh (cm)</td>
+              <td class="success text-center" id="class_male_1_c"></td>
+              <td class="warning text-center" id="class_male_2_c"></td>
+              <td class="danger text-center" id="class_male_3_c"></td>
+            </tr>
+            <tr>
+              <td>Lingkar Dada (cm)</td>
+              <td class="success text-center" id="class_male_1_d"></td>
+              <td class="warning text-center" id="class_male_2_d"></td>
+              <td class="danger text-center" id="class_male_3_d"></td>
+            </tr>
+            <tr>
+              <td>Berat Badan (kg)</td>
+              <td class="success text-center" id="class_male_1_e"></td>
+              <td class="warning text-center" id="class_male_2_e"></td>
+              <td class="danger text-center" id="class_male_3_e"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <a name="tim-peneliti"></a>
+      <div class="page-header" style="padding-top: 50px;">
+        <h2>Tim Peneliti</h2>
+      </div>
+
+      <ul class="media-list">
+        <li class="media">
+          <a class="pull-left" href="#">
+            <img class="media-object thumbnail" src="images/1.jpg">
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading">I Putu Sampurna</h4>
+            <p>Sea lettuce melon cabbage leek bamboo shoot lettuce rutabaga jícama silver beet amaranth pea dandelion scallion pea sprouts yarrow salsify bitterleaf courgette. Azuki bean horseradish potato kale welsh onion fennel green bean azuki bean chickweed aubergine bell pepper sea lettuce rutabaga cucumber grape. Radish grape rutabaga celery beetroot kombu spring onion cauliflower soybean.</p>
+          </div>
+        </li>
+        <li class="media">
+          <a class="pull-left" href="#">
+            <img class="media-object thumbnail" src="images/2.jpg">
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading">I Ketut Saka</h4>
+            <p>Sea lettuce melon cabbage leek bamboo shoot lettuce rutabaga jícama silver beet amaranth pea dandelion scallion pea sprouts yarrow salsify bitterleaf courgette. Azuki bean horseradish potato kale welsh onion fennel green bean azuki bean chickweed aubergine bell pepper sea lettuce rutabaga cucumber grape. Radish grape rutabaga celery beetroot kombu spring onion cauliflower soybean.</p>
+          </div>
+        </li>
+        <li class="media">
+          <a class="pull-left" href="#">
+            <img class="media-object thumbnail" src="images/3.jpg">
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading">I Gusti Lanang Oka</h4>
+            <p>Sea lettuce melon cabbage leek bamboo shoot lettuce rutabaga jícama silver beet amaranth pea dandelion scallion pea sprouts yarrow salsify bitterleaf courgette. Azuki bean horseradish potato kale welsh onion fennel green bean azuki bean chickweed aubergine bell pepper sea lettuce rutabaga cucumber grape. Radish grape rutabaga celery beetroot kombu spring onion cauliflower soybean.</p>
+          </div>
+        </li>
+        <li class="media">
+          <a class="pull-left" href="#">
+            <img class="media-object thumbnail" src="images/4.jpg">
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading">Sentana Putra</h4>
+            <p>Sea lettuce melon cabbage leek bamboo shoot lettuce rutabaga jícama silver beet amaranth pea dandelion scallion pea sprouts yarrow salsify bitterleaf courgette. Azuki bean horseradish potato kale welsh onion fennel green bean azuki bean chickweed aubergine bell pepper sea lettuce rutabaga cucumber grape. Radish grape rutabaga celery beetroot kombu spring onion cauliflower soybean.</p>
+          </div>
+        </li>
+      </ul>
+
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  
+    <script type="text/javascript">
+    $(document).ready(function()
+    {
+      buildValues(6);
+
+      $('#button_calculate').click(function()
+      {
+        var age = parseInt($('#input_age').val());
+        buildValues(age);
+      });
+    });
+
+    function buildValues(age)
+    {
+      $('#female_age').html(age);
+      $('#male_age').html(age);
+
+      $('#class_female_1_a').html(buildWidthFemale(age, 1, 2));
+      $('#class_female_2_a').html(buildWidthFemale(age, -1, 1));
+      $('#class_female_3_a').html(buildWidthFemale(age, -2, -1));
+
+      $('#class_male_1_a').html(buildWidthMale(age, 1, 2));
+      $('#class_male_2_a').html(buildWidthMale(age, -1, 1));
+      $('#class_male_3_a').html(buildWidthMale(age, -2, -1));
+
+      $('#class_female_1_b').html(buildHeightFemale(age, 1, 2));
+      $('#class_female_2_b').html(buildHeightFemale(age, -1, 1));
+      $('#class_female_3_b').html(buildHeightFemale(age, -2, -1));
+
+      $('#class_male_1_b').html(buildHeightMale(age, 1, 2));
+      $('#class_male_2_b').html(buildHeightMale(age, -1, 1));
+      $('#class_male_3_b').html(buildHeightMale(age, -2, -1));
+
+      $('#class_female_1_c').html(buildLengthFemale(age, -1, -1));
+      $('#class_female_2_c').html(buildLengthFemale(age, -1, -1));
+      $('#class_female_3_c').html(buildLengthFemale(age, -2, -1));
+
+      $('#class_male_1_c').html(buildLengthMale(age, 1, 2));
+      $('#class_male_2_c').html(buildLengthMale(age, -1, 1));
+      $('#class_male_3_c').html(buildLengthMale(age, -2, -1));
+
+      $('#class_female_1_d').html(buildBodyFemale(age, 1, 2));
+      $('#class_female_2_d').html(buildBodyFemale(age, -1, 1));
+      $('#class_female_3_d').html(buildBodyFemale(age, -2, -1));
+
+      $('#class_male_1_d').html(buildBodyMale(age, 1, 2));
+      $('#class_male_2_d').html(buildBodyMale(age, -1, 1));
+      $('#class_male_3_d').html(buildBodyMale(age, -2, -1));
+
+      $('#class_female_1_e').html(buildWeightFemale(age, -1, -1, 1, 2));
+      $('#class_female_2_e').html(buildWeightFemale(age, -1, -1, -1, 1));
+      $('#class_female_3_e').html(buildWeightFemale(age, -2, -1, -2, -1));
+
+      $('#class_male_1_e').html(buildWeightMale(age, 1, 2, 1, 2));
+      $('#class_male_2_e').html(buildWeightMale(age, -1, 1, -1, 1));
+      $('#class_male_3_e').html(buildWeightMale(age, -2, -1, -2, -1));
+    }
+
+    function formatValues(from, to)
+    {
+      return from.toFixed(2) + ' &ndash; ' + to.toFixed(2);
+    }
+
+    function calculateWidthFemale(age, constants)
+    {
+      return 40.05/(1+1.52*(Math.pow(2.71828,(-0.16*(age+constants)))));
+    }
+
+    function calculateWidthMale(age, constants)
+    {
+      return 50.0032/(1+2.24*(Math.pow(2.71828,(-0.14*(age+constants)))));
+    }
+
+    function calculateHeightFemale(age, constants)
+    {
+      return 115.500005/(1+1.06*(Math.pow(2.71828,(-0.22*(age+constants)))));
+    }
+
+    function calculateHeightMale(age, constants)
+    {
+      return 130.000052/(1+1.34*(Math.pow(2.71828,(-0.16*(age+constants)))));
+    }
+
+    function calculateLengthFemale(age, constants)
+    {
+      return 120.1/(1+1.42*(Math.pow(2.71828,(-0.17*(age+constants)))))
+    }
+
+    function calculateLengthMale(age, constants)
+    {
+      return 140.5/(1+1.81*(Math.pow(2.71828,(-0.14*(age+constants)))))
+    }
+
+    function calculateBodyFemale(age, constants)
+    {
+      return 162.05/(1+1.49*(Math.pow(2.71828,(-0.15*(age+constants)))))
+    }
+
+    function calculateBodyMale(age, constants)
+    {
+      return 189.1/(1+1.9*(Math.pow(2.71828,(-0.14*(age+constants)))))
+    }
+
+    function buildWidthFemale(age, from, to)
+    {
+      var from = calculateWidthFemale(age, from);
+      var to = calculateWidthFemale(age, to);
+      return formatValues(from, to);
+    }
+
+    function buildWidthMale(age, from, to)
+    {
+      var from = calculateWidthMale(age, from);
+      var to = calculateWidthMale(age, to);
+      return formatValues(from, to);
+    }
+
+    function buildHeightFemale(age, from, to)
+    {
+      from = calculateHeightFemale(age, from);
+      to = calculateHeightFemale(age, to);
+      return formatValues(from, to);
+    }
+
+    function buildHeightMale(age, from, to)
+    {
+      from = calculateHeightMale(age, from);
+      to = calculateHeightMale(age, to);
+      return formatValues(from, to);
+    }
+
+    function buildLengthFemale(age, from, to)
+    {
+      from = calculateLengthFemale(age, from)
+      to = calculateLengthFemale(age, to)
+      return formatValues(from, to);
+    }
+
+    function buildLengthMale(age, from, to)
+    {
+      from = calculateLengthMale(age, from)
+      to = calculateLengthMale(age, to)
+      return formatValues(from, to);
+    }
+
+    function buildBodyFemale(age, from, to)
+    {
+      from = calculateBodyFemale(age, from)
+      to = calculateBodyFemale(age, to)
+      return formatValues(from, to);
+    }
+
+    function buildBodyMale(age, from, to)
+    {
+      from = calculateBodyMale(age, from)
+      to = calculateBodyMale(age, to)
+      return formatValues(from, to);
+    }
+
+    function buildWeightFemale(age, from_length, to_length, from_weight, to_weight)
+    {
+      var from = 0;
+      var panjangTubuhFrom = calculateLengthFemale(age, from_length);
+      var lingkarDadaFrom = calculateBodyFemale(age, from_weight);
+
+      if (age < 25)
+      {
+        from = (panjangTubuhFrom * Math.pow(lingkarDadaFrom, 2))/(12400+20*age);
+      }
+      else if (age<275)
+      {
+        from = (panjangTubuhFrom * Math.pow(lingkarDadaFrom, 2))/(12400+20*(24-(age-24)))
+      }
+      else
+      {
+        from = (panjangTubuhFrom * Math.pow(lingkarDadaFrom, 2))/7860
+      }
+
+      var to = 0;
+      var panjangTubuhTo = calculateLengthFemale(age, to_length);
+      var lingkarDadaTo = calculateBodyFemale(age, to_weight);
+      
+      if (age < 25)
+      {
+        to = (panjangTubuhTo * Math.pow(lingkarDadaTo, 2))/(12400+20*age)
+      }
+      else if (age<275)
+      {
+        to = (panjangTubuhTo * Math.pow(lingkarDadaTo, 2))/(12400+20*(24-(age-24)))
+      }
+      else
+      {
+        to = (panjangTubuhTo * Math.pow(lingkarDadaTo, 2))/7860
+      }
+
+      return formatValues(from, to);
+    }
+
+    function buildWeightMale(age, from_length, to_length, from_weight, to_weight)
+    {
+      var from = 0;
+      var panjangTubuhFrom = calculateLengthMale(age, from_length);
+      var lingkarDadaFrom = calculateBodyMale(age, from_weight);
+
+      if (age < 25)
+      {
+        from = (panjangTubuhFrom * Math.pow(lingkarDadaFrom, 2))/(12400+150*age);
+      }
+      else if (age<275)
+      {
+        from = (panjangTubuhFrom * Math.pow(lingkarDadaFrom, 2))/(12400+150*(24-(age-24)))
+      }
+      else
+      {
+        from = (panjangTubuhFrom * Math.pow(lingkarDadaFrom, 2))/8350
+      }
+
+      var to = 0;
+      var panjangTubuhTo = calculateLengthMale(age, to_length);
+      var lingkarDadaTo = calculateBodyMale(age, to_weight);
+      
+      if (age < 25)
+      {
+        to = (panjangTubuhTo * Math.pow(lingkarDadaTo, 2))/(12400+150*age)
+      }
+      else if (age<275)
+      {
+        to = (panjangTubuhTo * Math.pow(lingkarDadaTo, 2))/(12400+150*(24-(age-24)))
+      }
+      else
+      {
+        to = (panjangTubuhTo * Math.pow(lingkarDadaTo, 2))/8350
+      }
+
+      return formatValues(from, to);
+    }
+
+    </script>
+
+</body><style type="text/css">embed[type*="application/x-shockwave-flash"],embed[src*=".swf"],object[type*="application/x-shockwave-flash"],object[codetype*="application/x-shockwave-flash"],object[src*=".swf"],object[codebase*="swflash.cab"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"],object[classid*="d27cdb6e-ae6d-11cf-96b8-444553540000"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"]{  display: none !important;}</style></html>
