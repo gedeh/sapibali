@@ -40,14 +40,6 @@
             <li><a href="#simulasi">Simulasi</a></li>
             <li><a href="#tim-peneliti">Tim Peneliti</a></li>
           </ul>
-
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" class="form-control" id="input_age" placeholder="Umur Sapi Bali (bulan)">
-            </div>
-            <input type="button" class="btn btn-primary" id="button_calculate" value="Hitung">
-          </form>
-
         </div><!--/.nav-collapse -->
 
       </div>
@@ -59,7 +51,24 @@
       </div>
 
       <a name="simulasi"></a>
+
       <div class="page-header" style="padding-top: 50px;">
+        <h2>Simulasi</h2>
+      </div>
+
+      <div class="col-sm-6">
+        <form role="form">
+          <div class="form-group">
+            <label for="input_age">Input umur Sapi Bali dalam satuan bulan</label>
+            <input type="text" class="form-control input-lg" id="input_age" placeholder="Input umur Sapi Bali (dalam bulan)">
+          </div>
+          <input type="button" class="btn btn-primary btn-lg" id="button_calculate" value="Hitung Ukuran Tubuh">
+        </form>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="page-header">
         <h2>Sapi Betina <small>Umur <span id="female_age"></span> Bulan</small></h2>
       </div>
 
