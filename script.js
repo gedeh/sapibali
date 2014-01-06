@@ -30,8 +30,8 @@
       $('#class_male_2_b').html(buildHeightMale(age, -1, 1));
       $('#class_male_3_b').html(buildHeightMale(age, -2, -1));
 
-      $('#class_female_1_c').html(buildLengthFemale(age, -1, -1));
-      $('#class_female_2_c').html(buildLengthFemale(age, -1, -1));
+      $('#class_female_1_c').html(buildLengthFemale(age, 1, 2));
+      $('#class_female_2_c').html(buildLengthFemale(age, -1, 1));
       $('#class_female_3_c').html(buildLengthFemale(age, -2, -1));
 
       $('#class_male_1_c').html(buildLengthMale(age, 1, 2));
@@ -46,8 +46,8 @@
       $('#class_male_2_d').html(buildBodyMale(age, -1, 1));
       $('#class_male_3_d').html(buildBodyMale(age, -2, -1));
 
-      $('#class_female_1_e').html(buildWeightFemale(age, -1, -1, 1, 2));
-      $('#class_female_2_e').html(buildWeightFemale(age, -1, -1, -1, 1));
+      $('#class_female_1_e').html(buildWeightFemale(age, 1, 2, 1, 2));
+      $('#class_female_2_e').html(buildWeightFemale(age, -1, 1, -1, 1));
       $('#class_female_3_e').html(buildWeightFemale(age, -2, -1, -2, -1));
 
       $('#class_male_1_e').html(buildWeightMale(age, 1, 2, 1, 2));
