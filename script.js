@@ -222,7 +222,7 @@
       {
         to = (panjangTubuhTo * Math.pow(lingkarDadaTo, 2))/(12400+150*age)
       }
-      else if (age<275)
+      else if (age<76)
       {
         to = (panjangTubuhTo * Math.pow(lingkarDadaTo, 2))/(12400+150*(24-(age-24)))
       }
